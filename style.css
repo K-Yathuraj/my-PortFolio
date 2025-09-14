@@ -1,62 +1,99 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    margin : 20px 40px 0px;
-    padding:3px;
+body {
+  margin: 20px 60px;
+  padding: 3px;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0px;
-
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
 }
 header h1 {
-    color: hsl(231, 83%, 34%);
-    /* cursor:; */
-
+  color: hsl(231, 83%, 34%);
+  margin-top: 4px;
+  /* cursor:; */
 }
 
 /* nav{
     
 } */
 
-
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 20px; 
-    padding: 0;
-    margin: 0;
- 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li{
-    padding:5px;
-    margin :5px;
+nav ul li {
+  padding: 5px;
+  margin: 5px;
 }
 
 nav ul li:hover {
-    background: hsl(231, 83%, 34%);
-    border-radius: 6px;
-    transition: background 0.3s, color 0.3s;
+  background: hsl(231, 83%, 34%);
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
 }
 
-nav ul li:hover a{
-    color: #fff;
-    transition: color 0.3s;
+nav ul li:hover a {
+  color: #fff;
+  transition: color 0.3s;
 }
 
+nav ul li a {
+  color: rgb(15, 36, 159);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
 
-nav ul li a{
-    color:hsl(231, 83%, 34%);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    
- }
- 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  padding: 0px;
+  width: 90%;
+  
+}
+#about h2 {
+  font-size: 16px;
+  color: rgb(15, 36, 159);
+  padding: 0px 3px 3px 5px;
+  margin-bottom: 5px;
+}
+
+#about p {
+  color:black;
+  padding :2px;
+  width:90%;
+  margin:0;
+}
+
+#projects {
+  padding:0px;
+  width: 90%;
+
+}
+#projects h2 {
+  font-size: 16px;
+  color: rgb(15, 36, 159);
+  padding: 0px 3px 3px 5px;
+  margin-bottom: 5px;
+  margin: 10px 0px 10px 0px;
+}
+
+#skills {
+  width: 90%;
+}
