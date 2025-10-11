@@ -1,73 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>K-Yathuraj</title>
-</head>
-<body>
-	<header>
-		<h1>K Yathuraj</h1>
-		<nav>
-			<ul >
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-Yathuraj</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Header & Navbar -->
+    <header class="bg-white shadow sticky top-0 z-50">
+      <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+        <div class="text-2xl font-extrabold text-blue-700 tracking-tight">K Yathuraj</div>
+        <ul id="nav-menu" class="hidden md:flex space-x-8 font-medium">
+          <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+          <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+          <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+          <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="block md:hidden text-blue-700 focus:outline-none" aria-label="Open Menu">
+          <!-- Hamburger Icon SVG -->
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-6 pb-4 bg-white shadow">
+        <li><a href="#about" class="block py-2 hover:text-blue-600 transition">About</a></li>
+        <li><a href="#projects" class="block py-2 hover:text-blue-600 transition">Projects</a></li>
+        <li><a href="#skills" class="block py-2 hover:text-blue-600 transition">Skills</a></li>
+        <li><a href="#contact" class="block py-2 hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+    </header>
 
+    <main class="container mx-auto px-4 py-10">
+      <!-- About Section -->
+      <section id="about" class="mb-16">
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
+        <p class="text-lg leading-relaxed max-w-2xl">
+          Hello! I'm <span class="font-semibold">K Yathuraj</span>, a passionate web developer with experience in building modern web applications and exploring new technologies. I enjoy solving problems and continuously learning to improve my skills.
+        </p>
+      </section>
 
-	<main>
-		<section id="about">
-			<h2>About Me</h2>
-			<p>Hello! I'm K Yathuraj, a passionate developer with experience in building web applications and exploring new technologies. I enjoy solving problems and continuously learning to improve my skills.</p>
-		</section>
+      <!-- Projects Section -->
+      <section id="projects" class="mb-16">
+        <h2 class="text-3xl font-bold text-blue-700 mb-8">Projects</h2>
+        <div class="grid gap-8 md:grid-cols-3 sm:grid-cols-2">
+          <!-- Project Card 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+            <a href="#">
+              <img src="./Gemini_Generated_Image_2xt1le2xt1le2xt1.png" alt="Portfolio" class="rounded-lg w-32 h-32 object-cover mb-4 shadow">
+            </a>
+            <h3 class="text-xl font-semibold mb-2">Portfolio</h3>
+            <p class="text-gray-600 text-center">Personal portfolio made using vanilla CSS and HTML5.</p>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+            <a href="#">
+              <img src="https://source.unsplash.com/featured/?task,app" alt="Task Manager" class="rounded-lg w-32 h-32 object-cover mb-4 shadow">
+            </a>
+            <h3 class="text-xl font-semibold mb-2">Task Manager App</h3>
+            <p class="text-gray-600 text-center">A simple app to manage daily tasks efficiently.</p>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+            <a href="#">
+              <img src="https://source.unsplash.com/featured/?weather,app" alt="Weather Dashboard" class="rounded-lg w-32 h-32 object-cover mb-4 shadow">
+            </a>
+            <h3 class="text-xl font-semibold mb-2">Weather Dashboard</h3>
+            <p class="text-gray-600 text-center">A web app displaying real-time weather data using APIs.</p>
+          </div>
+        </div>
+      </section>
 
-		<section id="projects">
-			<h2>Projects</h2>
-			<ul>
-				<li>
-					<strong>Portfolio Website:</strong> A personal website to showcase my skills and projects.
-				</li>
-				<li>
-					<strong>Task Manager App:</strong> A simple app to manage daily tasks efficiently.
-				</li>
-				<li>
-					<strong>Weather Dashboard:</strong> A web app displaying real-time weather data using APIs.
-				</li>
-			</ul>
-		</section>
+      <!-- Skills Section -->
+      <section id="skills" class="mb-16">
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Skills</h2>
+        <ul class="flex flex-wrap gap-4">
+          <li class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">HTML</li>
+          <li class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">CSS</li>
+          <li class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">JavaScript</li>
+          <li class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">React.js</li>
+          <li class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Node.js</li>
+          <li class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Git & GitHub</li>
+          <li class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">REST APIs</li>
+        </ul>
+      </section>
 
-		<section id="skills">
-			<h2>Skills</h2>
-			<ul>
-				<li>HTML, CSS, JavaScript</li>
-				<li>React.js</li>
-				<li>Node.js</li>
-				<li>Git & GitHub</li>
-				<li>REST APIs</li>
-			</ul>
-		</section>
-	</main>
+      <!-- Contact Section -->
+      <section id="contact" class="mb-16">
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact Me</h2>
+        <form class="bg-white rounded-xl shadow-md p-8 max-w-lg mx-auto space-y-6">
+          <div>
+            <label for="name" class="block font-semibold mb-1">Name</label>
+            <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div>
+            <label for="email" class="block font-semibold mb-1">Email</label>
+            <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div>
+            <label for="message" class="block font-semibold mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-700 text-white font-semibold py-2 rounded hover:bg-blue-800 transition">Send</button>
+        </form>
+      </section>
+    </main>
 
+    <footer class="bg-white border-t py-6 mt-10">
+      <div class="container mx-auto text-center text-gray-500 text-sm">
+        &copy; 2025 K Yathuraj. All rights reserved.
+      </div>
+    </footer>
 
-	<footer>
-		<form>
-			<h2>Contact Me</h2>
-			<label for="name">Name:</label><br>
-			<input type="text" id="name" name="name"><br><br>
-			
-			<label for="email">Email:</label><br>
-			<input type="email" id="email" name="email"><br><br>
-			
-			<label for="message">Message:</label><br>
-			<textarea id="message" name="message" rows="4"></textarea><br><br>
-			
-			<button type="submit">Send</button>
-		</form>
-	</footer>
-</body>
+    <!-- Hamburger Menu Script -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const navMenu = document.getElementById('nav-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Optional: Hide mobile menu on link click
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
+  </body>
 </html>

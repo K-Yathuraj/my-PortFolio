@@ -95,5 +95,23 @@ main {
 }
 
 #skills {
-  width: 90%;
+  width: 90% ;
+}
+
+.project-card {
+  width: 33.3%;
+  border: 1px solid rgb(15, 36, 159);
+  border-radius: 20px;
+  height: 250px;
+  padding: 10px auto 10px ;
+}
+.project-card a {
+  height: 70%;
+  padding: 5px;
+}
+.project-card a img {
+  width: 85%;
+  margin: 15px;
+  aspect-ratio: 1 1;
+  border-radius: 10px;
 }
