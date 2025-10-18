@@ -1,117 +1,88 @@
-* {
+@font-face {
+  font-family: Ubuntu;
+  src: url(fonts/Ubuntu-Regular.ttf);
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --color-1: #e6f8f6;
+  --color-3: #0daf9a;
+  --color-2: #03414d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 20px 60px;
-  padding: 3px;
+  font-family: Ubuntu;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  background: #00000033;
+  /* color:white; */
 }
 
 header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0px;
-}
-header h1 {
-  color: hsl(231, 83%, 34%);
-  margin-top: 4px;
-  /* cursor:; */
-}
-
-/* nav{
-    
-} */
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  padding: 5px;
-  margin: 5px;
-}
-
-nav ul li:hover {
-  background: hsl(231, 83%, 34%);
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
-}
-
-nav ul li:hover a {
-  color: #fff;
-  transition: color 0.3s;
-}
-
-nav ul li a {
-  color: rgb(15, 36, 159);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 1.2rem;
+  background-color: var(--color-3);
+}
+nav h2 {
+  color: white;
+  font-size: 2rem;
 }
 
-#about {
-  padding: 0px;
-  width: 90%;
-  
-}
-#about h2 {
-  font-size: 16px;
-  color: rgb(15, 36, 159);
-  padding: 0px 3px 3px 5px;
-  margin-bottom: 5px;
+.desknav {
+  display: none;
 }
 
-#about p {
-  color:black;
-  padding :2px;
-  width:90%;
-  margin:0;
+section {
+  padding-top: 65px;
 }
 
-#projects {
-  padding:0px;
-  width: 90%;
-
-}
-#projects h2 {
-  font-size: 16px;
-  color: rgb(15, 36, 159);
-  padding: 0px 3px 3px 5px;
-  margin-bottom: 5px;
-  margin: 10px 0px 10px 0px;
+img {
+  width: 100px;
 }
 
-#skills {
-  width: 90% ;
-}
+@media (min-width: 425px) {
+  .desknav {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+  }
 
-.project-card {
-  width: 33.3%;
-  border: 1px solid rgb(15, 36, 159);
-  border-radius: 20px;
-  height: 250px;
-  padding: 10px auto 10px ;
-}
-.project-card a {
-  height: 70%;
-  padding: 5px;
-}
-.project-card a img {
-  width: 85%;
-  margin: 15px;
-  aspect-ratio: 1 1;
-  border-radius: 10px;
+  .desknav li a,
+  .desknav li a:visited {
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+  }
+
+  .desknav li a:hover,
+  .desknav li a:focus {
+    background: white;
+    color: var(--color-3);
+    border-radius: 0.8rem;
+  }
+
+  .mobnavbutton {
+    display: none;
+  }
 }
