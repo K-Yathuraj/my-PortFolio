@@ -1,9 +1,4 @@
-@font-face {
-  font-family: Ubuntu;
-  src: url(fonts/Ubuntu-Regular.ttf);
-}
-
-/* css reset */
+/* Global reset  */
 *,
 *::before,
 *::after {
@@ -12,77 +7,50 @@
   box-sizing: border-box;
 }
 
-:root {
-  --color-1: #e6f8f6;
-  --color-3: #0daf9a;
-  --color-2: #03414d;
+/* utility classes */
+
+.rounded {
+  border-radius: 50vw;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* end of utility classes */
 
-body {
-  font-family: Ubuntu;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  background: #00000033;
-  /* color:white; */
-}
+/* main css  */
 
 header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-}
-
-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem;
-  background-color: var(--color-3);
-}
-nav h2 {
-  color: white;
-  font-size: 2rem;
+  justify-content: end;
+  padding: 10px 10px;
+  margin: 10px;
+  border: 2px solid hsl(241, 74%, 38%);
+  border-radius: 1rem;
 }
 
-.desknav {
-  display: none;
+.nav-links {
+  padding: 8px 8px;
+  font-size: 1.4rem;
+  text-decoration: none;
 }
 
-section {
-  padding-top: 65px;
+.nav-links,
+.nav-links:visited {
+  color: hsl(241, 74%, 38%);
+  border-radius: 2rem;
 }
 
-img {
-  width: 100px;
+.nav-links:hover,
+.nav-links:focus {
+  background-color: hsla(219, 78%, 46%, 0.87);
+  color: #fff;
 }
 
-@media (min-width: 425px) {
-  .desknav {
-    display: flex;
-    gap: 1rem;
-    list-style-type: none;
-  }
 
-  .desknav li a,
-  .desknav li a:visited {
-    color: white;
-    padding: 0.5rem;
-    text-decoration: none;
-    font-size: 1.4rem;
-  }
+.profile-picture img {
+  width: 35%;
+  height: auto;
+  float: left;
+  margin: 0px 50px 30px 50px;
 
-  .desknav li a:hover,
-  .desknav li a:focus {
-    background: white;
-    color: var(--color-3);
-    border-radius: 0.8rem;
-  }
-
-  .mobnavbutton {
-    display: none;
-  }
 }
+
+/* end of main css  */
